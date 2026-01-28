@@ -1,0 +1,7 @@
+{
+  "name": "Friend Association Management",
+  "description": "A comprehensive, bilingual (English & Bangla) application for managing savings, investments, members, and association finances.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
