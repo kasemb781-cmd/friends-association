@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function Home() {
+function Home()
   return <h1>Friends Association App is Live ✅</h1>;
 }
 
