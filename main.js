@@ -1,53 +1,70 @@
-import React from "https://esm.sh/react@19.2.4";
-import { createRoot } from "https://esm.sh/react-dom@19.2.4/client";
-
-function App() {
-  const [page, setPage] = React.useState("home");
-
-  if (page === "login") {
-    return React.createElement(
-      "div",
-      { style: { textAlign: "center", marginTop: "40px" } },
-      React.createElement("h2", null, "Login Page"),
-      React.createElement(
-        "button",
-        { onClick: () => setPage("home") },
-        "Back"
-      )
-    );
-  }
-
-  if (page === "signup") {
-    return React.createElement(
-      "div",
-      { style: { textAlign: "center", marginTop: "40px" } },
-      React.createElement("h2", null, "Signup Page"),
-      React.createElement(
-        "button",
-        { onClick: () => setPage("home") },
-        "Back"
-      )
-    );
-  }
-
-  // Home page
+if (page === "signup") {
   return React.createElement(
     "div",
-    { style: { textAlign: "center", marginTop: "40px" } },
-    React.createElement("h1", null, "Friends Association App is Live ✅"),
-    React.createElement(
-      "button",
-      { onClick: () => setPage("login"), style: { marginRight: "10px" } },
-      "Login"
+    { style: { maxWidth: "400px", margin: "40px auto" } },
+
+    React.createElement("h2", { style: { textAlign: "center" } }, "Member Signup"),
+
+    React.createElement("input", {
+      placeholder: "Full Name",
+      style: inputStyle
+    }),
+
+    React.createElement("select", { style: inputStyle }, 
+      React.createElement("option", null, "Select ID Type"),
+      React.createElement("option", null, "NID"),
+      React.createElement("option", null, "Passport"),
+      React.createElement("option", null, "Birth Certificate")
     ),
+
+    React.createElement("input", {
+      placeholder: "Identification Number",
+      style: inputStyle
+    }),
+
+    React.createElement("input", {
+      placeholder: "Mobile Number",
+      style: inputStyle
+    }),
+
+    React.createElement("input", {
+      placeholder: "Email Address",
+      style: inputStyle
+    }),
+
+    React.createElement("select", { style: inputStyle },
+      React.createElement("option", null, "Select Occupation"),
+      React.createElement("option", null, "Expatriates"),
+      React.createElement("option", null, "Businessman"),
+      React.createElement("option", null, "Student"),
+      React.createElement("option", null, "Job Holder")
+    ),
+
+    React.createElement("input", {
+      type: "password",
+      placeholder: "Password",
+      style: inputStyle
+    }),
+
+    React.createElement("input", {
+      type: "password",
+      placeholder: "Confirm Password",
+      style: inputStyle
+    }),
+
     React.createElement(
       "button",
-      { onClick: () => setPage("signup") },
-      "Signup"
+      { style: buttonStyle },
+      "Create Account"
+    ),
+
+    React.createElement(
+      "button",
+      {
+        style: { marginTop: "10px", width: "100%" },
+        onClick: () => setPage("home")
+      },
+      "Back"
     )
   );
 }
-
-createRoot(document.getElementById("root")).render(
-  React.createElement(App)
-);
