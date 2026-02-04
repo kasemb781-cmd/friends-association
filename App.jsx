@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+function Home() {
+  return <h1>Friends Association App is Live ✅</h1>;
+}
+
 function Login() {
-  return <h2>Login Page</h2>;
+  return <h1>Login Page</h1>;
 }
 
 function Signup() {
-  return <h2>Signup Page</h2>;
-}
-
-function Home() {
-  return <h1>Friends Association App is Live ✅</h1>;
+  return <h1>Signup Page</h1>;
 }
 
 export default function App() {
